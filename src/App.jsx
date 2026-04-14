@@ -35,6 +35,7 @@ const projects = [
     highlights: ["Roles de usuario", "Gestión de tickets", "Dashboard", "Lógica de negocio"],
     accent: "from-sky-500/20 to-indigo-400/10",
     emoji: "🛠️",
+    link: "https://sistemadetickets.onrender.com/",
   },
   {
     title: "Landing Page de Gimnasio",
@@ -44,6 +45,7 @@ const projects = [
     highlights: ["Diseño visual", "Responsive", "Branding", "UI moderna"],
     accent: "from-violet-500/20 to-fuchsia-400/10",
     emoji: "🏋️",
+    link: "https://landing-page-gym-8jkh.vercel.app/",
   },
   {
     title: "Sistema de Reservas para Gimnasio",
@@ -53,6 +55,7 @@ const projects = [
     highlights: ["Reservas", "Cupos disponibles", "Dashboard demo", "UX comercial"],
     accent: "from-amber-500/20 to-orange-400/10",
     emoji: "📅",
+    link: "https://gym-reservation-demo.vercel.app",
   },
 ];
 
@@ -214,6 +217,7 @@ export default function App() {
                   Proyecto
                 </span>
               </div>
+
               <h3 className="text-2xl font-bold">{project.title}</h3>
               <p className="mt-3 text-sm font-semibold text-sky-300">{project.stack}</p>
               <p className="mt-4 text-sm leading-7 text-white/70">{project.description}</p>
@@ -229,9 +233,14 @@ export default function App() {
                 ))}
               </div>
 
-              <button className="mt-8 rounded-full bg-sky-400 px-5 py-3 text-sm font-bold text-black transition hover:scale-[1.02]">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-block rounded-full bg-sky-400 px-5 py-3 text-sm font-bold text-black transition hover:scale-[1.02]"
+              >
                 Ver proyecto
-              </button>
+              </a>
             </div>
           ))}
         </div>
