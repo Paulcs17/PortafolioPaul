@@ -2,5 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; }
-body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base body */
+body {
+  @apply bg-neutral-950 text-white antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Selection (cuando seleccionas texto) */
+::selection {
+  background: #38bdf8;
+  color: #000;
+}
+
+/* Scrollbar (más moderno) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Botones efecto suave */
+button, a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Contenedores más suaves */
+section {
+  position: relative;
+}
+
+/* Inputs (por si agregas más adelante) */
+input, textarea {
+  @apply bg-neutral-900 border border-white/10 text-white rounded-xl px-4 py-3 outline-none;
+}
+
+input:focus, textarea:focus {
+  border-color: #38bdf8;
+}
+
+/* Animación ligera */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
